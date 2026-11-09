@@ -39,14 +39,14 @@ LOW_DEPTH_VARIANTS = True
 if __name__=="__main__":
     p=argparse.ArgumentParser(description="Amplified-region -> graph -> cycles -> consensus sequence pipeline")
     p.add_argument('-b',"--bam", required=True, type=str, help='[STR] Input sorted bam, index required')
-    p.add_argument('-o',"--output_dir", default='./fec_output/', type=str, help='[STR] Name of output directory')
+    p.add_argument('-o',"--output_dir", default='./FCircLR_output/', type=str, help='[STR] Name of output directory')
     p.add_argument('-r',"--reference_genome", required=True, type=str, help='[STR] Import reference chromosome genome')
     p.add_argument('-ms',"--min_support", type=int, help='[INT] Minimum number of support reads for insertion reads')
     p.add_argument('-t',"--threads", type=int, default=4, help="[INT] Number of CPU threads to use")
     p.add_argument('-mc',"--max_cycle_len", type=int, default=20, help="[INT] Maximum number of fragments allowed in each eccDNA cycle")
     p.add_argument('-mq',"--min_mapping_quality", type=int, default=30, help="[INT] Minimum read mapping quality for big-cycle region depth; 0 counts multi-mapping reads and inflates depth in repeat regions")
 
-    p.add_argument("--consensus", dest="consensus", action="store_true", default=True, help="Build each big cycle's sequence from its reads along the FEC path with bsalign POA (default)")
+    p.add_argument("--consensus", dest="consensus", action="store_true", default=True, help="Build each big cycle's sequence from its reads along the FCircLR path with bsalign POA (default)")
     p.add_argument("--no_consensus", dest="consensus", action="store_false", help="Skip the consensus step; no summary_bigcycle.fa is written")
     add_consensus_arguments(p)
 
