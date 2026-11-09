@@ -4,7 +4,7 @@ import argparse, os, sys, random, logging,  pysam, csv, time
 import multiprocessing as mp
 from bisect import bisect_left, bisect_right
 import numpy as np
-from fec_login import *
+from fclr_login import *
 
 def merge_regions(regions):
 

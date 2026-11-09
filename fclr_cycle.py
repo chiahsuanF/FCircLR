@@ -8,7 +8,7 @@ import pysam
 import statistics
 from collections import Counter, defaultdict
 
-from fec_login import junction_mq_passes, partner_side_allowed
+from fclr_login import junction_mq_passes, partner_side_allowed
 
 def parse_nodes(path):
 
@@ -31,7 +31,7 @@ def strandless_node(node):
 # Selecting big cycles
 # ---------------------------------------------------------------
 #
-# fec_cycled's search never revisits a region inside one path, so a
+# fclr_cycled's search never revisits a region inside one path, so a
 # small cycle always lists distinct regions. A larger cycle therefore
 # explains a smaller one whenever it covers all of the smaller one's
 # regions: the small cycle is a shortcut across the same structure, not

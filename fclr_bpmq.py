@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 import os, logging, pysam, re
-from fec_login import *
+from fclr_login import *
 
 # -----------------------
 # 3. Extract Breakpoints with MapQ  // c1, bp1 connect c2, bp2 

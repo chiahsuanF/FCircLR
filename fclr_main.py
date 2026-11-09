@@ -2,17 +2,17 @@
 
 import argparse, os, sys, shutil, logging
 
-from fec_login import *
-from fec_minisup import *
-from fec_amplified import *
-from fec_bpmq import *
-from fec_refine import *
-from fec_junctiongraph import *
-from fec_cycled import *
-from fec_filterc import *
-from fec_cycle import *
-from fec_consensus import run_consensus, add_consensus_arguments
-from fec_plot import plot_bigcycles_from_summary
+from fclr_login import *
+from fclr_minisup import *
+from fclr_amplified import *
+from fclr_bpmq import *
+from fclr_refine import *
+from fclr_junctiongraph import *
+from fclr_cycled import *
+from fclr_filterc import *
+from fclr_cycle import *
+from fclr_consensus import run_consensus, add_consensus_arguments
+from fclr_plot import plot_bigcycles_from_summary
 
 
 
