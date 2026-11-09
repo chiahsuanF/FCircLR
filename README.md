@@ -78,7 +78,7 @@ export PATH=/path/to/FCircLR/:$PATH
 |--poa_mode||[STR] bsalign poa -m mode (global or overlap)|Fales|global|
 
 ## Use cases
-fec required input as an aligned BAM file with header. Mapping raw data suggests using minimap2 and samtools. Input reference only needs reference chrM.fa, duplicated sequence and required indexed by using BWA.
+FCircLR required input as an aligned BAM file with header. Mapping raw data suggests using minimap2 and samtools. Input reference only needs reference chrM.fa, duplicated sequence and required indexed by using BWA.
 
 ### Mapping long-read raw data with minimap2 and samtools:
 Download the reference FASTA file and sample's FASTQ file, then:
@@ -129,7 +129,7 @@ TCATTTTCCCCTTCAATGATGGGGCCCCAAAATTTAAAGTACTTGTTCGGGCCCTTAAACCACAAAAAACAAAATTTTTT
 2026-10-19 09:49:09,974 [INFO] Starting pipeline for sample SRR19746237
 2026-10-19 09:49:09,974 [INFO] Estimating depth & minsupp from 100 random regions
 ...
-2026-10-19 10:09:28,278 [INFO] Wrote 2 contigs -> SRR19746237_fec_v5_out14_mq30/summary_bigcycle.fa
+2026-10-19 10:09:28,278 [INFO] Wrote 2 contigs -> FCircLR_out/summary_bigcycle.fa
 2026-10-19 10:09:28,278 [INFO]  END: Building big-cycle FASTA (0.0s)
 2026-10-19 10:09:28,278 [INFO] Pipeline completed successfully
 ```
