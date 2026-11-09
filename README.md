@@ -1,6 +1,6 @@
 
-# FEC
-Finding ECCDNA(FEC) from long-read sequencing data.
+# FCircLR
+FCircLR: Full-Length Detection and Reconstruction of Extrachromosomal Circular DNA from Long Reads
 
 Author: Chia Hsuan(Josh) Fan
 
@@ -9,8 +9,8 @@ Email: rge4br@virginia.edu
 ## Quick Start
 
 ```sh
-git clone https://github.com/chiahsuanF/FECc.git
-cd FECc/
+git clone https://github.com/chiahsuanF/FCircLR.git
+cd FCircLR/
 ./fclr_main.py -h
 ```
 
@@ -23,14 +23,14 @@ cd FECc/
 ```
 
 ## Description
-fec is a tool for finding ECCDNA(Extrachromosomal circular DNA) in nuclear genome.      
+FCircLR is a tool for finding ECCDNA(Extrachromosomal circular DNA) in nuclear genome.      
 
 Amplified-region → graph → cycles → POA pipeline
 
 The input file should be a long-read indexed BAM(PacBio Hifi and Oxford Nanopore) file. The output is a standard VCF file which passed filter. This program was test on a x86_64 Linux system with 40GB physical memory.
 
 ## Dependency
-Dependencies for fec:
+Dependencies for FCircLR:
 
 * python3(version 3.10 or later)
 * pysam(version 0.22.0 or later)
@@ -39,14 +39,14 @@ Dependencies for fec:
 * matplotlib(version 3.5 or later)
 * bsalign(version 1.2.1 or later), must be on PATH; only needed for the consensus step (skip it with `--no_consensus`)
 
-minimap2 and samtools are only needed to prepare the input BAM (see [Use cases](#use-cases)); fec does not call them.
+minimap2 and samtools are only needed to prepare the input BAM (see [Use cases](#use-cases)); FCircLR does not call them.
 
 ## Installation
 
 ### Git
 ```
-git clone https://github.com/chiahsuanF/FECc.git
-cd FECc/
+git clone https://github.com/chiahsuanF/FCircLR.git
+cd FCircLR/
 pip install -r requirements.txt
 ```
 
@@ -57,9 +57,9 @@ cd bsalign && make
 export PATH=$PWD:$PATH
 ```
 
-Next, add the fec directory to PATH:
+Next, add the FCircLR directory to PATH:
 ```
-export PATH=/path/to/FECc/:$PATH
+export PATH=/path/to/FCircLR/:$PATH
 ```
 
 ## General usage
@@ -67,13 +67,13 @@ export PATH=/path/to/FECc/:$PATH
 |:---------|:-------------|:-------------|:-------------|:-------------|
 |-h |--help|Show this help message and exit||
 |-b |--bam|[STR] Input sorted bam, index required |True|
-|-o |--output_dir|[STR] Name of output directory|Fales|fec_output|
+|-o |--output_dir|[STR] Name of output directory|Fales|FCircLR_output|
 |-r |--reference_genome|[STR] Import reference chromosome genome|True|
 |-ms |--min_support|[INT] Minimum number of support reads for insertion reads|Fales|
 |-t |--threads|[INT] Number of CPU threads to use|Fales|4|
 |-mc |--max_cycle_len|[INT]Maximum number of fragments allowed in each eccDNA cycle|Fales|20|
 |-mq |--min_mapping_quality|[INT] Minimum read mapping quality for big-cycle region depth; 0 counts multi-mapping reads and inflates depth in repeat regions|Fales|30|
-|--consensus||Build each big cycle's sequence from its reads along the FEC path with bsalign POA |Fales|True|
+|--consensus||Build each big cycle's sequence from its reads along the FCircLR path with bsalign POA |Fales|True|
 |--no_consensus||Skip the consensus step; no summary_bigcycle.fa is written|Fales|Fales|
 |--poa_mode||[STR] bsalign poa -m mode (global or overlap)|Fales|global|
 
