@@ -11,15 +11,15 @@ Email: rge4br@virginia.edu
 ```sh
 git clone https://github.com/chiahsuanF/FECc.git
 cd FECc/
-./fec_main.py -h
+./fclr_main.py -h
 ```
 
 ```sh
 # Finding ECCDNA with indexed bam using required functions. The reference using human hg38.
-./fec_main.py -b <index.bam> -r <ref.fa>
+./fclr_main.py -b <index.bam> -r <ref.fa>
 
 # Example usage:
-./fec_main.py -b index_aligned_human_hg38.bam -r hg38.fa
+./fclr_main.py -b index_aligned_human_hg38.bam -r hg38.fa
 ```
 
 ## Description

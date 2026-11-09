@@ -3,8 +3,8 @@
 import os, logging
 from collections import defaultdict
 from bisect import bisect_left, bisect_right
-from fec_login import *
-from fec_amplified import merge_regions
+from fclr_login import *
+from fclr_amplified import merge_regions
 
 # -----------------------
 # 3b. Extend regions to anchored breakpoints

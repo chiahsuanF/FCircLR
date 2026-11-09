@@ -2,7 +2,7 @@
 
 import argparse, os, sys, shutil, logging, subprocess, pysam
 from concurrent.futures import ThreadPoolExecutor
-from fec_login import *
+from fclr_login import *
 
 
 COMPLEMENT = str.maketrans("ACGTNacgtn", "TGCANtgcan")

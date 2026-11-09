@@ -3,7 +3,7 @@
 import os, logging, pysam
 from collections import defaultdict
 from functools import lru_cache
-from fec_login import *
+from fclr_login import *
 
 
 # -----------------------

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 import os, logging, pysam
-from fec_login import *
+from fclr_login import *
 
 # -----------------------
 # 7. Filter & Write Cycles
