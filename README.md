@@ -83,7 +83,7 @@ FCircLR required input as an aligned BAM file with header. Mapping raw data sugg
 ### Mapping long-read raw data with minimap2 and samtools:
 Download the reference FASTA file and sample's FASTQ file, then:
 ```
-minimap2 -ax map-hifi ref.fa sample.fq > aligned.sam
+minimap2 -ax map-ont ref.fa sample.fq > aligned.sam
 samtools sort aligned.sam -o aligned.bam
 samtools index -b aligned.bam
 ```
